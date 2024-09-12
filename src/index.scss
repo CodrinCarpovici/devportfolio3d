@@ -4,6 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*COLORS*/
+$primary-black: #1e1e1e;
+$primary-black-mask: #1e1e1e7e;
+$navbar-black: #1e1e1ef1;
+$primary-blue: #00a6ff;
+$primary-blue-mask: #00a6ffa1;
+$primary-green: #68ecb9;
+$primary-pink: #bf76ff;
+$primary-purple: #5448c8;
+
+$highlight-grey: #b7b7b7;
+$highlight-blue: #008ad4;
+$highlight-green: #22de95;
+$secondary-pink: #e3c4ff;
+$secondary-purple: #9893cf;
+
+$light-blue: #2ab4ff;
+
+$primary-gradient: linear-gradient(
+  90deg,
+  rgba(0, 166, 255, 1) 0%,
+  rgba(191, 118, 255, 1) 100%
+);
+
 * {
   margin: 0;
   padding: 0;
@@ -200,5 +225,77 @@
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+
+// Toggler Button Styles
+.navbar-toggler {
+  width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height as needed */
+  position: relative;
+  transition: 0.5s ease-in-out;
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+  }
+
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $primary-blue;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transition: 0.25s ease-in-out;
+  }
+
+  .top-bar {
+    top: 0;
+  }
+
+  .middle-bar {
+    top: 8px; /* Adjust to control spacing between lines */
+  }
+
+  .bottom-bar {
+    top: 16px; /* Adjust to control spacing between lines */
+  }
+
+  &.collapsed {
+    .top-bar {
+      transform: rotate(0deg);
+      top: 0;
+    }
+
+    .middle-bar {
+      opacity: 1;
+    }
+
+    .bottom-bar {
+      transform: rotate(0deg);
+      top: 16px; /* Adjust to control spacing between lines */
+    }
+  }
+
+  &:not(.collapsed) {
+    .top-bar {
+      transform: rotate(135deg);
+      top: 8px; /* Adjust to control spacing between lines */
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .bottom-bar {
+      transform: rotate(-135deg);
+      top: 8px; /* Adjust to control spacing between lines */
+    }
   }
 }

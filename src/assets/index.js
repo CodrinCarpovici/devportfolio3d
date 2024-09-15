@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import livesite from "./livesite.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -28,9 +29,11 @@ import sovereign from "./company/sovereign.png";
 import eurokit from "./company/eurokit.png";
 import edx from "./company/edx.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import sovereignhouse from "./sovereignhouse.png";
+import eurokitsite from "./eurokitsite.png";
+import bookbridge from "./bookbridge.png";
+import trimtutor from "./trimtutor.png";
+import littlelemon from "./littlelemon.png";
 
 export {
   logo,
@@ -60,7 +63,10 @@ export {
   sovereign,
   eurokit,
   edx,
-  carrent,
-  jobit,
-  tripguide,
+  sovereignhouse,
+  eurokitsite,
+  bookbridge,
+  livesite,
+  trimtutor,
+  littlelemon,
 };

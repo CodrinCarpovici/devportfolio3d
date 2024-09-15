@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../CanvasLoader"
 import { use } from "framer-motion/client";
 
 const Computers = ({ isMobile }) => {

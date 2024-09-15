@@ -13,13 +13,15 @@ import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
+import bootstrap from "./tech/bootstrap.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import styledComponents from "./tech/styled-components.png";
+import wordpress from "./tech/wordpress.png";
 
 import meta from "./company/meta.png";
 import sovereign from "./company/sovereign.png";
@@ -45,13 +47,15 @@ export {
   git,
   html,
   javascript,
-  mongodb,
+  bootstrap,
   nodejs,
   reactjs,
   redux,
   tailwind,
   typescript,
   threejs,
+  styledComponents,
+  wordpress,
   meta,
   sovereign,
   eurokit,

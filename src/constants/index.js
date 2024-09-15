@@ -11,7 +11,7 @@ import {
     redux,
     tailwind,
     nodejs,
-    mongodb,
+    bootstrap,
     git,
     figma,
     docker,
@@ -22,7 +22,9 @@ import {
     jobit,
     tripguide,
     threejs,
-    eurokit
+    eurokit,
+    styledComponents,
+    wordpress
   } from "../assets";
   
   export const navLinks = [
@@ -72,10 +74,10 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
+    // {
+    //   name: "TypeScript",
+    //   icon: typescript,
+    // },
     {
       name: "React JS",
       icon: reactjs,
@@ -93,8 +95,8 @@ import {
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "Bootstrap",
+      icon: bootstrap,
     },
     {
       name: "Three JS",
@@ -109,9 +111,17 @@ import {
       icon: figma,
     },
     {
-      name: "docker",
-      icon: docker,
+      name: "styled components",
+      icon: styledComponents,
     },
+    {
+      name: "wordpress",
+      icon: wordpress,
+    },
+    // {
+    //   name: "docker",
+    //   icon: docker,
+    // },
   ];
   
   const experiences = [
@@ -120,7 +130,7 @@ import {
       company_name: "Eurokit Hidraulica",
       icon: eurokit,
       iconBg: "#E6DEDD",
-      date: "October 2021 - February 2021",
+      date: "October 2020 - February 2021",
       points: [
         "Developed and optimized a hydraulics products website from scratch using ReactJS, Bootstrap, SASS, HTML, and Javascript.",
         "Collaborated with a backend developer to implement data retrieval for the product tables, ensuring accurate and up-to-date information for users.",

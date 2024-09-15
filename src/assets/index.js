@@ -27,6 +27,7 @@ import wordpress from "./tech/wordpress.png";
 import meta from "./company/meta.png";
 import sovereign from "./company/sovereign.png";
 import eurokit from "./company/eurokit.png";
+import eurokitwhite from "./company/eurokitwhite.png";
 import edx from "./company/edx.png";
 
 import sovereignhouse from "./sovereignhouse.png";
@@ -34,6 +35,8 @@ import eurokitsite from "./eurokitsite.png";
 import bookbridge from "./bookbridge.png";
 import trimtutor from "./trimtutor.png";
 import littlelemon from "./littlelemon.png";
+
+import irene from "./irene.png";
 
 export {
   logo,
@@ -69,4 +72,6 @@ export {
   livesite,
   trimtutor,
   littlelemon,
+  irene,
+  eurokitwhite
 };

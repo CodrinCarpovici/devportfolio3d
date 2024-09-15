@@ -27,6 +27,8 @@ import {
   eurokitsite,
   trimtutor,
   littlelemon,
+  irene,
+  eurokitwhite,
 } from "../assets";
 
 export const navLinks = [
@@ -187,27 +189,19 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Codrin pitched excellently, we went with his idea for theme guideline, which has proven to be an overall winner! Codrin is committed, dedicated, professional and happy to lead. He has learnt and used his skills effectively and he will go a long way as a professional website developer.",
+    name: "Irene Lockett",
+    designation: "Founder & CEO",
+    company: "Sovereign House GH",
+    image: irene,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Codrin has helped us bring our business online by creating a perfect website for our specifications. We now use the website on a regular to promote our products and to increase our revenue from online customers too. It has also allowed us to reduce workload and we couldn't be more grateful for the work he has done. ",
+    name: "Marius Butanu",
+    designation: "Founder & CEO",
+    company: "Eurokit Hidraulica",
+    image: eurokitwhite,
   },
 ];
 

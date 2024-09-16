@@ -14,13 +14,27 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText}`}>
-            Hi, I'm <span className="text-[#915eff]">Codrin</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <div className="display-title" style={{ "--stacks": 3 }}>
+            <span style={{ "--index": 0 }}>
+              Hi, I'm <span className="text-[#915EFF]">Codrin</span>
+            </span>
+            <span style={{ "--index": 1 }}>
+              Hi, I'm <span className="text-[#915EFF]">Codrin</span>
+            </span>
+            <span style={{ "--index": 2 }}>
+              Hi, I'm <span className="text-[#915EFF]">Codrin</span>
+            </span>
+          </div>
+
+          <motion.p
+            className={`${styles.heroSubText} mt-2 text-white-100`}
+            initial={{ opacity: 0, y: -20 }} // Start hidden and slightly above
+            animate={{ opacity: 1, y: 0 }} // Fade in and move to its original position
+            transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
+          >
             I develop user interfaces, web <br className="sm:block hidden" />
             applications and web designs
-          </p>
+          </motion.p>
         </div>
       </div>
       <ComputersCanvas />

@@ -14,8 +14,43 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    let isValid = true;
+
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required.";
+      isValid = false;
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Email address is invalid.";
+      isValid = false;
+    }
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleChange = (e) => {
     const { target } = e;
@@ -29,11 +64,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    // service_yg95c0m
-    // template_nxrq69s
-    // TjbBuGUSGmRefVrvr
+    if (!validateForm()) return; // Exit if validation fails
+
+    setLoading(true);
+    setResponseMessage(""); // Clear previous messages
 
     emailjs
       .send(
@@ -51,7 +86,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setResponseMessage("Thank you! I will get back to you as soon as possible.");
 
           setForm({
             name: "",
@@ -63,7 +98,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          setResponseMessage("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -94,6 +129,7 @@ const Contact = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && <p className="text-red-500 mt-2">{errors.name}</p>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -105,6 +141,7 @@ const Contact = () => {
               placeholder="What's your email address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && <p className="text-red-500 mt-2">{errors.email}</p>}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -116,14 +153,21 @@ const Contact = () => {
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.message && <p className="text-red-500 mt-2">{errors.message}</p>}
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary mx-auto"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          {responseMessage && (
+              <p className={`mt-4 mx-auto ${responseMessage.includes("Ahh") ? "text-red-500" : "text-green-500"}`}>
+                {responseMessage}
+              </p>
+            )}
         </form>
       </motion.div>
 

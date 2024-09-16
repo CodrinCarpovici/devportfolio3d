@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*COLORS*/
 $primary-black: #1e1e1e;
 $primary-black-mask: #1e1e1e7e;
@@ -55,6 +54,20 @@ $primary-gradient: linear-gradient(
     to right,
     #434343,
     #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.green-gradient {
+  background: rgb(255, 255, 255); /* fallback for old browsers */
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(17, 153, 142, 1) 100%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(17, 153, 142, 1) 100%
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -133,6 +146,22 @@ $primary-gradient: linear-gradient(
   background: linear-gradient(
     to top,
     #ec008c,
+    #fc6767
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-text-gradient {
+  background: $primary-purple; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    $primary-purple,
+    #fc6767
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    $primary-purple,
     #fc6767
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
@@ -227,7 +256,6 @@ $primary-gradient: linear-gradient(
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
-
 
 // Toggler Button Styles
 .navbar-toggler {

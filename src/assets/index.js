@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import livesite from "./livesite.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -13,22 +14,29 @@ import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
+import bootstrap from "./tech/bootstrap.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import styledComponents from "./tech/styled-components.png";
+import wordpress from "./tech/wordpress.png";
 
 import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import sovereign from "./company/sovereign.png";
+import eurokit from "./company/eurokit.png";
+import eurokitwhite from "./company/eurokitwhite.png";
+import edx from "./company/edx.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import sovereignhouse from "./sovereignhouse.png";
+import eurokitsite from "./eurokitsite.png";
+import bookbridge from "./bookbridge.png";
+import trimtutor from "./trimtutor.png";
+import littlelemon from "./littlelemon.png";
+
+import irene from "./irene.png";
 
 export {
   logo,
@@ -45,18 +53,25 @@ export {
   git,
   html,
   javascript,
-  mongodb,
+  bootstrap,
   nodejs,
   reactjs,
   redux,
   tailwind,
   typescript,
   threejs,
+  styledComponents,
+  wordpress,
   meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  sovereign,
+  eurokit,
+  edx,
+  sovereignhouse,
+  eurokitsite,
+  bookbridge,
+  livesite,
+  trimtutor,
+  littlelemon,
+  irene,
+  eurokitwhite
 };
